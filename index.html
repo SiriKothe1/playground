@@ -89,17 +89,7 @@
     </dl></div>
     <details>
         <summary>Detailed Description</summary>
-        This solution package collects various data from IOS-XR devices.
-This package is certified for the following platforms.
-<UL>
-    <LI>CRS-1</LI>
-    <LI>ASR9K</LI>
-</UL>
-<p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-</p>
+        
     </details>
     <details>
         <summary>CLI Collection</summary>
@@ -114,31 +104,31 @@ This package is certified for the following platforms.
             
             <tr>
                 <td>show ip bgp neighbors</td>
-                <td>{{device_fw_type == "Cisco IOS-XR" }}</td>
+                <td>False</td>
                 <td></td>
             </tr>
             
             <tr>
                 <td>show ip interface brief</td>
-                <td>{{device_fw_type == "Cisco IOS-XR" }}</td>
+                <td>False</td>
                 <td></td>
             </tr>
             
             <tr>
                 <td>show ip ospf neighbor</td>
-                <td>{{device_fw_type == "Cisco IOS-XR" }}</td>
+                <td>False</td>
                 <td></td>
             </tr>
             
             <tr>
                 <td>show cdp neighbors detail</td>
-                <td>{{device_fw_type == "Cisco IOS-XR" }}</td>
+                <td>False</td>
                 <td></td>
             </tr>
             
             <tr>
                 <td>show lldp neighbors detail</td>
-                <td>{{device_fw_type == "Cisco IOS-XR"}}</td>
+                <td>False</td>
                 <td></td>
             </tr>
             
@@ -1704,8 +1694,8 @@ This package is certified for the following platforms.
             </thead>
             
             <tr>
-                <td>onboarded_devices</td>
-                <td>./data/onboarded_devices.csv</td>
+                <td>collection_profile</td>
+                <td>./data/collection_profile.csv</td>
             </tr>
             
         </table>
@@ -1722,7 +1712,7 @@ This package is certified for the following platforms.
             </thead>
             
             <tr>
-                <td>topo_collection_$PKG_CUSTOMER</td>
+                <td>topo_collection_$PKG_CONTEXT_CUSTOMER_ID</td>
                 <td>2024.2.16.1</td>
                 <td>./artifacts/pipelines/topo_collection.txt</td>
             </tr>
