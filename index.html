@@ -1,5 +1,1730 @@
 <html>
-  <body>
-    <a href="rda_packs.html>RDA Packs</a>
-          </body>
-          </html>
+
+<head>
+    <title>iosxr_data_collection RDA Solution Package </title>
+    <style>
+        details {
+            border: 1px solid #aaa;
+            border-radius: 4px;
+            padding: 0.5em 0.5em 0.5em;
+            margin-bottom: 0.5em;
+        }
+        summary {
+            font-weight: bold;
+            margin: -0.5em -0.5em 0;
+            padding: 0.5em;
+            
+        }
+
+        details[open] {
+            padding: 0.5em;
+        }
+
+        details[open] summary {
+            border-bottom: 1px solid #aaa;
+            margin-bottom: 0.5em;
+        }
+        dt, dd {
+            display: inline-block;
+            margin: 0;
+        }
+        dt {
+            font-weight: bold;
+        }
+        dt:after {
+            content: ":";
+        }
+        dd {
+            border-right: 1px solid #aaa;
+            padding: 0 0.5em 0 0.5em;
+        }
+        dd:last-of-type {
+            border-right: 0px;
+        }
+    
+        table {
+        border-collapse: collapse;
+        border: 2px solid rgb(140 140 140);
+        font-family: sans-serif;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        }
+
+        caption {
+        caption-side: bottom;
+        padding: 10px;
+        font-weight: bold;
+        }
+
+        thead,
+        tfoot {
+        background-color: rgb(228 240 245);
+        }
+
+        th,
+        td {
+        border: 1px solid rgb(160 160 160);
+        padding: 8px 10px;
+        }
+
+        tbody > tr:nth-of-type(even) {
+        background-color: rgb(237 238 242);
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Solution Package: iosxr_data_collection</h2>
+    <div><dl>
+        <dt>Version</dt>
+        <dd>1.0.0</dd>
+        <dt>Folder</dt>
+        <dd>/collection/network/cisco/iosxr</dd>
+        <dt>Publised Date</dt>
+        <dd>2024-02-16</dd>
+        <dt>Publisher</dt>
+        <dd>Cloudfabrix</dd>
+        <dt>Package Type</dt>
+        <dd>collection</dd>
+    </dl></div>
+    <details>
+        <summary>Detailed Description</summary>
+        
+    </details>
+    <details>
+        <summary>CLI Collection</summary>
+        <table>
+            <thead>
+                <tr>
+                    <th>Command</th>
+                    <th>Condition</th>
+                    <th>Comment</th>
+                </tr>
+            </thead>
+            
+            <tr>
+                <td>show ip bgp neighbors</td>
+                <td>False</td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>show ip interface brief</td>
+                <td>False</td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>show ip ospf neighbor</td>
+                <td>False</td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>show cdp neighbors detail</td>
+                <td>False</td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>show lldp neighbors detail</td>
+                <td>False</td>
+                <td></td>
+            </tr>
+            
+        </table>
+    </details>
+    <details>
+        <summary>SNMP Collection</summary>
+        
+        <details>
+            <summary>cdpGlobal</summary>
+            <table>
+                <thead>
+                    <tr>
+                        <th>MIB</th>
+                        <th>Object</th>
+                        <th>OID</th>
+                    </tr>
+                </thead>
+                
+                <tr>
+                    <td>cdpGlobal</td>
+                    <td>cdpGlobalRun</td>
+                    <td>{cdpGlobal}.1.0</td>
+                </tr>
+                
+                <tr>
+                    <td>cdpGlobal</td>
+                    <td>cdpGlobalDeviceId</td>
+                    <td>{cdpGlobal}.4.0</td>
+                </tr>
+                
+            </table>
+        </details>
+        
+        <details>
+            <summary>cdpCache</summary>
+            <table>
+                <thead>
+                    <tr>
+                        <th>MIB</th>
+                        <th>Object</th>
+                        <th>OID</th>
+                    </tr>
+                </thead>
+                
+                <tr>
+                    <td>cdpCache</td>
+                    <td>cdpCacheAddress</td>
+                    <td>{cdpCacheEntry}.4:ipaddress</td>
+                </tr>
+                
+                <tr>
+                    <td>cdpCache</td>
+                    <td>cdpCacheDeviceId</td>
+                    <td>{cdpCacheEntry}.6</td>
+                </tr>
+                
+                <tr>
+                    <td>cdpCache</td>
+                    <td>cdpCacheDevicePort</td>
+                    <td>{cdpCacheEntry}.7</td>
+                </tr>
+                
+                <tr>
+                    <td>cdpCache</td>
+                    <td>cdpCachePlatform</td>
+                    <td>{cdpCacheEntry}.8</td>
+                </tr>
+                
+                <tr>
+                    <td>cdpCache</td>
+                    <td>cdpCacheCapabilities</td>
+                    <td>{cdpCacheEntry}.9:hex</td>
+                </tr>
+                
+                <tr>
+                    <td>cdpCache</td>
+                    <td>cdpCacheSysObjectID</td>
+                    <td>{cdpCacheEntry}.18</td>
+                </tr>
+                
+                <tr>
+                    <td>cdpCache</td>
+                    <td>cdpCachePrimaryMgmtAddrType</td>
+                    <td>{cdpCacheEntry}.19</td>
+                </tr>
+                
+                <tr>
+                    <td>cdpCache</td>
+                    <td>cdpCacheSecondaryMgmtAddr</td>
+                    <td>{cdpCacheEntry}.22</td>
+                </tr>
+                
+            </table>
+        </details>
+        
+        <details>
+            <summary>ciscoVLAN</summary>
+            <table>
+                <thead>
+                    <tr>
+                        <th>MIB</th>
+                        <th>Object</th>
+                        <th>OID</th>
+                    </tr>
+                </thead>
+                
+                <tr>
+                    <td>ciscoVLAN</td>
+                    <td>vmVlanType</td>
+                    <td>{entvlan}.1.1</td>
+                </tr>
+                
+                <tr>
+                    <td>ciscoVLAN</td>
+                    <td>vmVlan</td>
+                    <td>{entvlan}.1.2</td>
+                </tr>
+                
+                <tr>
+                    <td>ciscoVLAN</td>
+                    <td>vmPortStatus</td>
+                    <td>{entvlan}.1.3</td>
+                </tr>
+                
+            </table>
+        </details>
+        
+        <details>
+            <summary>ceAssetTable</summary>
+            <table>
+                <thead>
+                    <tr>
+                        <th>MIB</th>
+                        <th>Object</th>
+                        <th>OID</th>
+                    </tr>
+                </thead>
+                
+                <tr>
+                    <td>ceAssetTable</td>
+                    <td>ceAssetSerialNumber</td>
+                    <td>{ceAssetEntry}.2</td>
+                </tr>
+                
+                <tr>
+                    <td>ceAssetTable</td>
+                    <td>ceAssetOrderablePartNumber</td>
+                    <td>{ceAssetEntry}.3</td>
+                </tr>
+                
+                <tr>
+                    <td>ceAssetTable</td>
+                    <td>ceAssetHardwareRevision</td>
+                    <td>{ceAssetEntry}.4</td>
+                </tr>
+                
+                <tr>
+                    <td>ceAssetTable</td>
+                    <td>ceAssetMfgAssyNumber</td>
+                    <td>{ceAssetEntry}.5</td>
+                </tr>
+                
+                <tr>
+                    <td>ceAssetTable</td>
+                    <td>ceAssetMfgAssyRevision</td>
+                    <td>{ceAssetEntry}.6</td>
+                </tr>
+                
+                <tr>
+                    <td>ceAssetTable</td>
+                    <td>ceAssetFirmwareID</td>
+                    <td>{ceAssetEntry}.7</td>
+                </tr>
+                
+                <tr>
+                    <td>ceAssetTable</td>
+                    <td>ceAssetFirmwareRevision</td>
+                    <td>{ceAssetEntry}.8</td>
+                </tr>
+                
+                <tr>
+                    <td>ceAssetTable</td>
+                    <td>ceAssetSoftwareID</td>
+                    <td>{ceAssetEntry}.9</td>
+                </tr>
+                
+                <tr>
+                    <td>ceAssetTable</td>
+                    <td>ceAssetSoftwareRevision</td>
+                    <td>{ceAssetEntry}.10</td>
+                </tr>
+                
+                <tr>
+                    <td>ceAssetTable</td>
+                    <td>ceAssetCLEI</td>
+                    <td>{ceAssetEntry}.11</td>
+                </tr>
+                
+                <tr>
+                    <td>ceAssetTable</td>
+                    <td>ceAssetAlias</td>
+                    <td>{ceAssetEntry}.12</td>
+                </tr>
+                
+                <tr>
+                    <td>ceAssetTable</td>
+                    <td>ceAssetTag</td>
+                    <td>{ceAssetEntry}.13</td>
+                </tr>
+                
+                <tr>
+                    <td>ceAssetTable</td>
+                    <td>ceAssetIsFRU</td>
+                    <td>{ceAssetEntry}.14</td>
+                </tr>
+                
+            </table>
+        </details>
+        
+        <details>
+            <summary>ciscoImage</summary>
+            <table>
+                <thead>
+                    <tr>
+                        <th>MIB</th>
+                        <th>Object</th>
+                        <th>OID</th>
+                    </tr>
+                </thead>
+                
+                <tr>
+                    <td>ciscoImage</td>
+                    <td>ciscoImageString</td>
+                    <td>{ciscoImageEntry}.2</td>
+                </tr>
+                
+            </table>
+        </details>
+        
+        <details>
+            <summary>ciscoEnhancedImage</summary>
+            <table>
+                <thead>
+                    <tr>
+                        <th>MIB</th>
+                        <th>Object</th>
+                        <th>OID</th>
+                    </tr>
+                </thead>
+                
+                <tr>
+                    <td>ciscoEnhancedImage</td>
+                    <td>ceImageName</td>
+                    <td>{ceImageEntry}.2</td>
+                </tr>
+                
+                <tr>
+                    <td>ciscoEnhancedImage</td>
+                    <td>ceImageFamily</td>
+                    <td>{ceImageEntry}.3</td>
+                </tr>
+                
+                <tr>
+                    <td>ciscoEnhancedImage</td>
+                    <td>ceImageFeature</td>
+                    <td>{ceImageEntry}.4</td>
+                </tr>
+                
+                <tr>
+                    <td>ciscoEnhancedImage</td>
+                    <td>ceImageVersion</td>
+                    <td>{ceImageEntry}.5</td>
+                </tr>
+                
+                <tr>
+                    <td>ciscoEnhancedImage</td>
+                    <td>ceImageMedia</td>
+                    <td>{ceImageEntry}.6</td>
+                </tr>
+                
+                <tr>
+                    <td>ciscoEnhancedImage</td>
+                    <td>ceImageDescription</td>
+                    <td>{ceImageEntry}.7</td>
+                </tr>
+                
+            </table>
+        </details>
+        
+        <details>
+            <summary>ciscoMemoryPool</summary>
+            <table>
+                <thead>
+                    <tr>
+                        <th>MIB</th>
+                        <th>Object</th>
+                        <th>OID</th>
+                    </tr>
+                </thead>
+                
+                <tr>
+                    <td>ciscoMemoryPool</td>
+                    <td>ciscoMemoryPoolType</td>
+                    <td>{ciscoMemoryPoolEntry}.1</td>
+                </tr>
+                
+                <tr>
+                    <td>ciscoMemoryPool</td>
+                    <td>ciscoMemoryPoolName</td>
+                    <td>{ciscoMemoryPoolEntry}.2</td>
+                </tr>
+                
+                <tr>
+                    <td>ciscoMemoryPool</td>
+                    <td>ciscoMemoryPoolAlternate</td>
+                    <td>{ciscoMemoryPoolEntry}.3</td>
+                </tr>
+                
+                <tr>
+                    <td>ciscoMemoryPool</td>
+                    <td>ciscoMemoryPoolValid</td>
+                    <td>{ciscoMemoryPoolEntry}.4</td>
+                </tr>
+                
+                <tr>
+                    <td>ciscoMemoryPool</td>
+                    <td>ciscoMemoryPoolUsed</td>
+                    <td>{ciscoMemoryPoolEntry}.5</td>
+                </tr>
+                
+                <tr>
+                    <td>ciscoMemoryPool</td>
+                    <td>ciscoMemoryPoolFree</td>
+                    <td>{ciscoMemoryPoolEntry}.6</td>
+                </tr>
+                
+                <tr>
+                    <td>ciscoMemoryPool</td>
+                    <td>ciscoMemoryPoolLargestFree</td>
+                    <td>{ciscoMemoryPoolEntry}.7</td>
+                </tr>
+                
+            </table>
+        </details>
+        
+        <details>
+            <summary>ciscoEnhancedMemoryPool</summary>
+            <table>
+                <thead>
+                    <tr>
+                        <th>MIB</th>
+                        <th>Object</th>
+                        <th>OID</th>
+                    </tr>
+                </thead>
+                
+                <tr>
+                    <td>ciscoEnhancedMemoryPool</td>
+                    <td>cempMemPoolType</td>
+                    <td>{cempMemPoolEntry}.2</td>
+                </tr>
+                
+                <tr>
+                    <td>ciscoEnhancedMemoryPool</td>
+                    <td>cempMemPoolName</td>
+                    <td>{cempMemPoolEntry}.3</td>
+                </tr>
+                
+                <tr>
+                    <td>ciscoEnhancedMemoryPool</td>
+                    <td>cempMemPoolPlatformMemory</td>
+                    <td>{cempMemPoolEntry}.4</td>
+                </tr>
+                
+                <tr>
+                    <td>ciscoEnhancedMemoryPool</td>
+                    <td>cempMemPoolAlternate</td>
+                    <td>{cempMemPoolEntry}.5</td>
+                </tr>
+                
+                <tr>
+                    <td>ciscoEnhancedMemoryPool</td>
+                    <td>cempMemPoolValid</td>
+                    <td>{cempMemPoolEntry}.6</td>
+                </tr>
+                
+                <tr>
+                    <td>ciscoEnhancedMemoryPool</td>
+                    <td>cempMemPoolUsed</td>
+                    <td>{cempMemPoolEntry}.7</td>
+                </tr>
+                
+                <tr>
+                    <td>ciscoEnhancedMemoryPool</td>
+                    <td>cempMemPoolFree</td>
+                    <td>{cempMemPoolEntry}.8</td>
+                </tr>
+                
+                <tr>
+                    <td>ciscoEnhancedMemoryPool</td>
+                    <td>cempMemPoolLargestFree</td>
+                    <td>{cempMemPoolEntry}.9</td>
+                </tr>
+                
+                <tr>
+                    <td>ciscoEnhancedMemoryPool</td>
+                    <td>cempMemPoolLowestFree</td>
+                    <td>{cempMemPoolEntry}.10</td>
+                </tr>
+                
+                <tr>
+                    <td>ciscoEnhancedMemoryPool</td>
+                    <td>cempMemPoolUsedLowWaterMark</td>
+                    <td>{cempMemPoolEntry}.11</td>
+                </tr>
+                
+                <tr>
+                    <td>ciscoEnhancedMemoryPool</td>
+                    <td>cempMemPoolAllocHit</td>
+                    <td>{cempMemPoolEntry}.12</td>
+                </tr>
+                
+                <tr>
+                    <td>ciscoEnhancedMemoryPool</td>
+                    <td>cempMemPoolAllocMiss</td>
+                    <td>{cempMemPoolEntry}.13</td>
+                </tr>
+                
+                <tr>
+                    <td>ciscoEnhancedMemoryPool</td>
+                    <td>cempMemPoolFreeHit</td>
+                    <td>{cempMemPoolEntry}.14</td>
+                </tr>
+                
+                <tr>
+                    <td>ciscoEnhancedMemoryPool</td>
+                    <td>cempMemPoolFreeMiss</td>
+                    <td>{cempMemPoolEntry}.15</td>
+                </tr>
+                
+            </table>
+        </details>
+        
+        <details>
+            <summary>cefcModuleTable</summary>
+            <table>
+                <thead>
+                    <tr>
+                        <th>MIB</th>
+                        <th>Object</th>
+                        <th>OID</th>
+                    </tr>
+                </thead>
+                
+                <tr>
+                    <td>cefcModuleTable</td>
+                    <td>cefcModuleAdminStatus</td>
+                    <td>{cefcModuleEntry}.1</td>
+                </tr>
+                
+                <tr>
+                    <td>cefcModuleTable</td>
+                    <td>cefcModuleOperStatus</td>
+                    <td>{cefcModuleEntry}.2</td>
+                </tr>
+                
+                <tr>
+                    <td>cefcModuleTable</td>
+                    <td>cefcModuleResetReason</td>
+                    <td>{cefcModuleEntry}.3</td>
+                </tr>
+                
+                <tr>
+                    <td>cefcModuleTable</td>
+                    <td>cefcModuleStatusLastChangeTime</td>
+                    <td>{cefcModuleEntry}.4</td>
+                </tr>
+                
+                <tr>
+                    <td>cefcModuleTable</td>
+                    <td>cefcModuleLastClearConfigTime</td>
+                    <td>{cefcModuleEntry}.5</td>
+                </tr>
+                
+                <tr>
+                    <td>cefcModuleTable</td>
+                    <td>cefcModuleResetReasonDescription</td>
+                    <td>{cefcModuleEntry}.6</td>
+                </tr>
+                
+                <tr>
+                    <td>cefcModuleTable</td>
+                    <td>cefcModuleStateChangeReasonDescr</td>
+                    <td>{cefcModuleEntry}.7</td>
+                </tr>
+                
+                <tr>
+                    <td>cefcModuleTable</td>
+                    <td>cefcModuleUpTime</td>
+                    <td>{cefcModuleEntry}.8</td>
+                </tr>
+                
+            </table>
+        </details>
+        
+        <details>
+            <summary>cefcFRUPowerStatusTable</summary>
+            <table>
+                <thead>
+                    <tr>
+                        <th>MIB</th>
+                        <th>Object</th>
+                        <th>OID</th>
+                    </tr>
+                </thead>
+                
+                <tr>
+                    <td>cefcFRUPowerStatusTable</td>
+                    <td>cefcFRUPowerAdminStatus</td>
+                    <td>{cefcFRUPowerStatusEntry}.1</td>
+                </tr>
+                
+                <tr>
+                    <td>cefcFRUPowerStatusTable</td>
+                    <td>cefcFRUPowerOperStatus</td>
+                    <td>{cefcFRUPowerStatusEntry}.2</td>
+                </tr>
+                
+            </table>
+        </details>
+        
+        <details>
+            <summary>dot1dBasePortTable</summary>
+            <table>
+                <thead>
+                    <tr>
+                        <th>MIB</th>
+                        <th>Object</th>
+                        <th>OID</th>
+                    </tr>
+                </thead>
+                
+                <tr>
+                    <td>dot1dBasePortTable</td>
+                    <td>dot1dBasePort</td>
+                    <td>{dot1dBasePortEntry}.1</td>
+                </tr>
+                
+                <tr>
+                    <td>dot1dBasePortTable</td>
+                    <td>dot1dTpFdbPort</td>
+                    <td>{dot1dBasePortEntry}.2</td>
+                </tr>
+                
+            </table>
+        </details>
+        
+        <details>
+            <summary>wlcaccesspointdata</summary>
+            <table>
+                <thead>
+                    <tr>
+                        <th>MIB</th>
+                        <th>Object</th>
+                        <th>OID</th>
+                    </tr>
+                </thead>
+                
+                <tr>
+                    <td>wlcaccesspointdata</td>
+                    <td>bsnAPNumOfSlots</td>
+                    <td>{Accespoint-data}.2</td>
+                </tr>
+                
+                <tr>
+                    <td>wlcaccesspointdata</td>
+                    <td>bsnAPName</td>
+                    <td>{Accespoint-data}.3</td>
+                </tr>
+                
+                <tr>
+                    <td>wlcaccesspointdata</td>
+                    <td>bsnAPLocation</td>
+                    <td>{Accespoint-data}.4</td>
+                </tr>
+                
+                <tr>
+                    <td>wlcaccesspointdata</td>
+                    <td>bsnAPMonitorOnlyMode</td>
+                    <td>{Accespoint-data}.5</td>
+                </tr>
+                
+                <tr>
+                    <td>wlcaccesspointdata</td>
+                    <td>bsnAPOperationStatus</td>
+                    <td>{Accespoint-data}.6</td>
+                </tr>
+                
+                <tr>
+                    <td>wlcaccesspointdata</td>
+                    <td>bsnAPSoftwareVersion</td>
+                    <td>{Accespoint-data}.8</td>
+                </tr>
+                
+                <tr>
+                    <td>wlcaccesspointdata</td>
+                    <td>bsnAPBootVersion</td>
+                    <td>{Accespoint-data}.9</td>
+                </tr>
+                
+                <tr>
+                    <td>wlcaccesspointdata</td>
+                    <td>bsnAPPrimaryMwarNam</td>
+                    <td>{Accespoint-data}.10</td>
+                </tr>
+                
+                <tr>
+                    <td>wlcaccesspointdata</td>
+                    <td>bsnAPStatsTime</td>
+                    <td>{Accespoint-data}.12</td>
+                </tr>
+                
+                <tr>
+                    <td>wlcaccesspointdata</td>
+                    <td>bsnAPPortNumber</td>
+                    <td>{Accespoint-data}.13</td>
+                </tr>
+                
+                <tr>
+                    <td>wlcaccesspointdata</td>
+                    <td>bsnAPModel</td>
+                    <td>{Accespoint-data}.16</td>
+                </tr>
+                
+                <tr>
+                    <td>wlcaccesspointdata</td>
+                    <td>bsnAPSerialNumber</td>
+                    <td>{Accespoint-data}.17</td>
+                </tr>
+                
+                <tr>
+                    <td>wlcaccesspointdata</td>
+                    <td>bsnApIpAddress</td>
+                    <td>{Accespoint-data}.19:ipaddress</td>
+                </tr>
+                
+                <tr>
+                    <td>wlcaccesspointdata</td>
+                    <td>bsnAPMirrorMode</td>
+                    <td>{Accespoint-data}.20</td>
+                </tr>
+                
+                <tr>
+                    <td>wlcaccesspointdata</td>
+                    <td>bsnAPRemoteModeSupport</td>
+                    <td>{Accespoint-data}.21</td>
+                </tr>
+                
+                <tr>
+                    <td>wlcaccesspointdata</td>
+                    <td>bsnAPType</td>
+                    <td>{Accespoint-data}.22</td>
+                </tr>
+                
+                <tr>
+                    <td>wlcaccesspointdata</td>
+                    <td>bsnAPSecondaryMwarName</td>
+                    <td>{Accespoint-data}.23</td>
+                </tr>
+                
+                <tr>
+                    <td>wlcaccesspointdata</td>
+                    <td>bsnAPTertiaryMwarName</td>
+                    <td>{Accespoint-data}.24</td>
+                </tr>
+                
+                <tr>
+                    <td>wlcaccesspointdata</td>
+                    <td>bsnAPIsStaticIP</td>
+                    <td>{Accespoint-data}.25:ipaddress</td>
+                </tr>
+                
+                <tr>
+                    <td>wlcaccesspointdata</td>
+                    <td>bsnAPNetmask</td>
+                    <td>{Accespoint-data}.26:ipaddress</td>
+                </tr>
+                
+                <tr>
+                    <td>wlcaccesspointdata</td>
+                    <td>bsnAPGateway</td>
+                    <td>{Accespoint-data}.27:ipaddress</td>
+                </tr>
+                
+                <tr>
+                    <td>wlcaccesspointdata</td>
+                    <td>bsnAPStaticIPAddress</td>
+                    <td>{Accespoint-data}.28:ipaddress</td>
+                </tr>
+                
+                <tr>
+                    <td>wlcaccesspointdata</td>
+                    <td>bsnAPBridgingSupport</td>
+                    <td>{Accespoint-data}.29</td>
+                </tr>
+                
+                <tr>
+                    <td>wlcaccesspointdata</td>
+                    <td>bsnAPGroupVlanName</td>
+                    <td>{Accespoint-data}.30</td>
+                </tr>
+                
+                <tr>
+                    <td>wlcaccesspointdata</td>
+                    <td>bsnAPIOSVersion</td>
+                    <td>{Accespoint-data}.31</td>
+                </tr>
+                
+                <tr>
+                    <td>wlcaccesspointdata</td>
+                    <td>bsnAPCertificateType</td>
+                    <td>{Accespoint-data}.32</td>
+                </tr>
+                
+                <tr>
+                    <td>wlcaccesspointdata</td>
+                    <td>bsnAPEthernetMacAddress</td>
+                    <td>{Accespoint-data}.33:macaddress</td>
+                </tr>
+                
+                <tr>
+                    <td>wlcaccesspointdata</td>
+                    <td>bsnAPAdminStatus</td>
+                    <td>{Accespoint-data}.37</td>
+                </tr>
+                
+            </table>
+        </details>
+        
+        <details>
+            <summary>clsSysInfo</summary>
+            <table>
+                <thead>
+                    <tr>
+                        <th>MIB</th>
+                        <th>Object</th>
+                        <th>OID</th>
+                    </tr>
+                </thead>
+                
+                <tr>
+                    <td>clsSysInfo</td>
+                    <td>clsSysFlashSize</td>
+                    <td>{wlc-data}.1.0</td>
+                </tr>
+                
+                <tr>
+                    <td>clsSysInfo</td>
+                    <td>clsSysMemoryType</td>
+                    <td>{wlc-data}.2.0</td>
+                </tr>
+                
+                <tr>
+                    <td>clsSysInfo</td>
+                    <td>clsSysMaxClients</td>
+                    <td>{wlc-data}.3.0</td>
+                </tr>
+                
+                <tr>
+                    <td>clsSysInfo</td>
+                    <td>clsSysApConnectCount</td>
+                    <td>{wlc-data}.4.0</td>
+                </tr>
+                
+                <tr>
+                    <td>clsSysInfo</td>
+                    <td>clsSysNetId</td>
+                    <td>{wlc-data}.5.0</td>
+                </tr>
+                
+                <tr>
+                    <td>clsSysInfo</td>
+                    <td>clsSysCurrentMemoryUsage</td>
+                    <td>{wlc-data}.6.0</td>
+                </tr>
+                
+                <tr>
+                    <td>clsSysInfo</td>
+                    <td>clsSysAverageMemoryUsage</td>
+                    <td>{wlc-data}.7.0</td>
+                </tr>
+                
+                <tr>
+                    <td>clsSysInfo</td>
+                    <td>clsSysCurrentCpuUsage</td>
+                    <td>{wlc-data}.8.0</td>
+                </tr>
+                
+                <tr>
+                    <td>clsSysInfo</td>
+                    <td>clsSysAverageCpuUsage</td>
+                    <td>{wlc-data}.9.0</td>
+                </tr>
+                
+                <tr>
+                    <td>clsSysInfo</td>
+                    <td>clsSysCpuType</td>
+                    <td>{wlc-data}.10.0</td>
+                </tr>
+                
+                <tr>
+                    <td>clsSysInfo</td>
+                    <td>clsMaxRFIDTagsCount</td>
+                    <td>{wlc-data}.11.0</td>
+                </tr>
+                
+                <tr>
+                    <td>clsSysInfo</td>
+                    <td>clsMaxClientsCount</td>
+                    <td>{wlc-data}.12.0</td>
+                </tr>
+                
+            </table>
+        </details>
+        
+        <details>
+            <summary>clsImageInfo</summary>
+            <table>
+                <thead>
+                    <tr>
+                        <th>MIB</th>
+                        <th>Object</th>
+                        <th>OID</th>
+                    </tr>
+                </thead>
+                
+                <tr>
+                    <td>clsImageInfo</td>
+                    <td>clsEmergencyImageVersion</td>
+                    <td>{wlc-data}.1.0</td>
+                </tr>
+                
+            </table>
+        </details>
+        
+        <details>
+            <summary>clsDot3BridgeEnabled</summary>
+            <table>
+                <thead>
+                    <tr>
+                        <th>MIB</th>
+                        <th>Object</th>
+                        <th>OID</th>
+                    </tr>
+                </thead>
+                
+                <tr>
+                    <td>clsDot3BridgeEnabled</td>
+                    <td>clsDot3BridgeEnabled</td>
+                    <td>{wlc-data}.1.0</td>
+                </tr>
+                
+            </table>
+        </details>
+        
+        <details>
+            <summary>clsCpuInfo</summary>
+            <table>
+                <thead>
+                    <tr>
+                        <th>MIB</th>
+                        <th>Object</th>
+                        <th>OID</th>
+                    </tr>
+                </thead>
+                
+                <tr>
+                    <td>clsCpuInfo</td>
+                    <td>clsAllCpuUsage</td>
+                    <td>{wlc-data}.1.0</td>
+                </tr>
+                
+            </table>
+        </details>
+        
+        <details>
+            <summary>agentCurrentCPUUtilization</summary>
+            <table>
+                <thead>
+                    <tr>
+                        <th>MIB</th>
+                        <th>Object</th>
+                        <th>OID</th>
+                    </tr>
+                </thead>
+                
+                <tr>
+                    <td>agentCurrentCPUUtilization</td>
+                    <td>agentCurrentCPUUtilization</td>
+                    <td>{wlc-data}.1.0</td>
+                </tr>
+                
+            </table>
+        </details>
+        
+        <details>
+            <summary>bsnSensorTemperature</summary>
+            <table>
+                <thead>
+                    <tr>
+                        <th>MIB</th>
+                        <th>Object</th>
+                        <th>OID</th>
+                    </tr>
+                </thead>
+                
+                <tr>
+                    <td>bsnSensorTemperature</td>
+                    <td>bsnSensorTemperature</td>
+                    <td>{wlc-data}.13.0</td>
+                </tr>
+                
+            </table>
+        </details>
+        
+        <details>
+            <summary>bsnDot11EssNumberOfMobileStations</summary>
+            <table>
+                <thead>
+                    <tr>
+                        <th>MIB</th>
+                        <th>Object</th>
+                        <th>OID</th>
+                    </tr>
+                </thead>
+                
+                <tr>
+                    <td>bsnDot11EssNumberOfMobileStations</td>
+                    <td>bsnDot11EssNumberOfMobileStations</td>
+                    <td>{wlc-data}.38.0</td>
+                </tr>
+                
+            </table>
+        </details>
+        
+        <details>
+            <summary>ciscoFlashDeviceTable</summary>
+            <table>
+                <thead>
+                    <tr>
+                        <th>MIB</th>
+                        <th>Object</th>
+                        <th>OID</th>
+                    </tr>
+                </thead>
+                
+                <tr>
+                    <td>ciscoFlashDeviceTable</td>
+                    <td>ciscoFlashDeviceSize</td>
+                    <td>{ciscoFlashDeviceEntry}.2</td>
+                </tr>
+                
+                <tr>
+                    <td>ciscoFlashDeviceTable</td>
+                    <td>ciscoFlashDeviceMinPartitionSize</td>
+                    <td>{ciscoFlashDeviceEntry}.3</td>
+                </tr>
+                
+                <tr>
+                    <td>ciscoFlashDeviceTable</td>
+                    <td>ciscoFlashDeviceMaxPartitions</td>
+                    <td>{ciscoFlashDeviceEntry}.4</td>
+                </tr>
+                
+                <tr>
+                    <td>ciscoFlashDeviceTable</td>
+                    <td>ciscoFlashDevicePartitions</td>
+                    <td>{ciscoFlashDeviceEntry}.5</td>
+                </tr>
+                
+                <tr>
+                    <td>ciscoFlashDeviceTable</td>
+                    <td>ciscoFlashDeviceName</td>
+                    <td>{ciscoFlashDeviceEntry}.7</td>
+                </tr>
+                
+                <tr>
+                    <td>ciscoFlashDeviceTable</td>
+                    <td>ciscoFlashDeviceDescr</td>
+                    <td>{ciscoFlashDeviceEntry}.8</td>
+                </tr>
+                
+                <tr>
+                    <td>ciscoFlashDeviceTable</td>
+                    <td>ciscoFlashDeviceRemovable</td>
+                    <td>{ciscoFlashDeviceEntry}.13</td>
+                </tr>
+                
+                <tr>
+                    <td>ciscoFlashDeviceTable</td>
+                    <td>ciscoFlashPhyEntIndex</td>
+                    <td>{ciscoFlashDeviceEntry}.14</td>
+                </tr>
+                
+                <tr>
+                    <td>ciscoFlashDeviceTable</td>
+                    <td>ciscoFlashDeviceNameExtended</td>
+                    <td>{ciscoFlashDeviceEntry}.15</td>
+                </tr>
+                
+            </table>
+        </details>
+        
+        <details>
+            <summary>cIeee8021</summary>
+            <table>
+                <thead>
+                    <tr>
+                        <th>MIB</th>
+                        <th>Object</th>
+                        <th>OID</th>
+                    </tr>
+                </thead>
+                
+                <tr>
+                    <td>cIeee8021</td>
+                    <td>cIeee8021PaeCapV12R0111bEXCat6K</td>
+                    <td>{cIeee8021}.1</td>
+                </tr>
+                
+                <tr>
+                    <td>cIeee8021</td>
+                    <td>cIeee8021PaeCapV15R0101SYCat6K</td>
+                    <td>{cIeee8021}.10</td>
+                </tr>
+                
+                <tr>
+                    <td>cIeee8021</td>
+                    <td>ciscoIeee8021PaeCapCatOSV07R0101</td>
+                    <td>{cIeee8021}.2</td>
+                </tr>
+                
+                <tr>
+                    <td>cIeee8021</td>
+                    <td>ciscoIeee8021PaeCapCatOSV08R0301</td>
+                    <td>{cIeee8021}.3</td>
+                </tr>
+                
+                <tr>
+                    <td>cIeee8021</td>
+                    <td>cIeee8021PaeCapV12R0233SXHPCat6K</td>
+                    <td>{cIeee8021}.4</td>
+                </tr>
+                
+                <tr>
+                    <td>cIeee8021</td>
+                    <td>cIeee8021PaeCapV12R0233SXIPCat6K</td>
+                    <td>{cIeee8021}.5</td>
+                </tr>
+                
+                <tr>
+                    <td>cIeee8021</td>
+                    <td>cIeee8021PaeCapV12R0252SGPCat4K</td>
+                    <td>{cIeee8021}.6</td>
+                </tr>
+                
+                <tr>
+                    <td>cIeee8021</td>
+                    <td>cIeee8021PaeCapV12R0233SXI4PCat6K</td>
+                    <td>{cIeee8021}.7</td>
+                </tr>
+                
+                <tr>
+                    <td>cIeee8021</td>
+                    <td>cIeee8021PaeCapV12R0250SYPCat6K</td>
+                    <td>{cIeee8021}.8</td>
+                </tr>
+                
+                <tr>
+                    <td>cIeee8021</td>
+                    <td>cIeee8021PaeCapV12R0233SXJPCat6K</td>
+                    <td>{cIeee8021}.9</td>
+                </tr>
+                
+            </table>
+        </details>
+        
+        <details>
+            <summary>cpaePortTable</summary>
+            <table>
+                <thead>
+                    <tr>
+                        <th>MIB</th>
+                        <th>Object</th>
+                        <th>OID</th>
+                    </tr>
+                </thead>
+                
+                <tr>
+                    <td>cpaePortTable</td>
+                    <td>cpaeMultipleHost</td>
+                    <td>{cpaePortEntry}.1</td>
+                </tr>
+                
+                <tr>
+                    <td>cpaePortTable</td>
+                    <td>cpaePortCapabilitiesEnabled</td>
+                    <td>{cpaePortEntry}.10:hex</td>
+                </tr>
+                
+                <tr>
+                    <td>cpaePortTable</td>
+                    <td>cpaePortMode</td>
+                    <td>{cpaePortEntry}.2</td>
+                </tr>
+                
+                <tr>
+                    <td>cpaePortTable</td>
+                    <td>cpaeGuestVlanNumber</td>
+                    <td>{cpaePortEntry}.3</td>
+                </tr>
+                
+                <tr>
+                    <td>cpaePortTable</td>
+                    <td>cpaeInGuestVlan</td>
+                    <td>{cpaePortEntry}.4</td>
+                </tr>
+                
+                <tr>
+                    <td>cpaePortTable</td>
+                    <td>cpaeShutdownTimeoutEnabled</td>
+                    <td>{cpaePortEntry}.5</td>
+                </tr>
+                
+                <tr>
+                    <td>cpaePortTable</td>
+                    <td>cpaePortAuthFailVlan</td>
+                    <td>{cpaePortEntry}.6</td>
+                </tr>
+                
+                <tr>
+                    <td>cpaePortTable</td>
+                    <td>cpaePortOperVlan</td>
+                    <td>{cpaePortEntry}.7</td>
+                </tr>
+                
+                <tr>
+                    <td>cpaePortTable</td>
+                    <td>cpaePortOperVlanType</td>
+                    <td>{cpaePortEntry}.8</td>
+                </tr>
+                
+                <tr>
+                    <td>cpaePortTable</td>
+                    <td>cpaeAuthFailVlanMaxAttempts</td>
+                    <td>{cpaePortEntry}.9</td>
+                </tr>
+                
+            </table>
+        </details>
+        
+        <details>
+            <summary>cpaeAuthConfigTable</summary>
+            <table>
+                <thead>
+                    <tr>
+                        <th>MIB</th>
+                        <th>Object</th>
+                        <th>OID</th>
+                    </tr>
+                </thead>
+                
+                <tr>
+                    <td>cpaeAuthConfigTable</td>
+                    <td>cpaeAuthReAuthPeriodSrcAdmin</td>
+                    <td>{cpaeAuthConfigEntry}.1</td>
+                </tr>
+                
+                <tr>
+                    <td>cpaeAuthConfigTable</td>
+                    <td>cpaeAuthReAuthPeriodSrcOper</td>
+                    <td>{cpaeAuthConfigEntry}.2</td>
+                </tr>
+                
+                <tr>
+                    <td>cpaeAuthConfigTable</td>
+                    <td>cpaeAuthReAuthPeriodOper</td>
+                    <td>{cpaeAuthConfigEntry}.3</td>
+                </tr>
+                
+                <tr>
+                    <td>cpaeAuthConfigTable</td>
+                    <td>cpaeAuthTimeToNextReAuth</td>
+                    <td>{cpaeAuthConfigEntry}.4</td>
+                </tr>
+                
+                <tr>
+                    <td>cpaeAuthConfigTable</td>
+                    <td>cpaeAuthReAuthAction</td>
+                    <td>{cpaeAuthConfigEntry}.5</td>
+                </tr>
+                
+                <tr>
+                    <td>cpaeAuthConfigTable</td>
+                    <td>cpaeAuthReAuthMax</td>
+                    <td>{cpaeAuthConfigEntry}.6</td>
+                </tr>
+                
+                <tr>
+                    <td>cpaeAuthConfigTable</td>
+                    <td>cpaeAuthIabEnabled</td>
+                    <td>{cpaeAuthConfigEntry}.7</td>
+                </tr>
+                
+                <tr>
+                    <td>cpaeAuthConfigTable</td>
+                    <td>cpaeAuthPaeState</td>
+                    <td>{cpaeAuthConfigEntry}.8</td>
+                </tr>
+                
+            </table>
+        </details>
+        
+        <details>
+            <summary>cpaeHostInfoTable</summary>
+            <table>
+                <thead>
+                    <tr>
+                        <th>MIB</th>
+                        <th>Object</th>
+                        <th>OID</th>
+                    </tr>
+                </thead>
+                
+                <tr>
+                    <td>cpaeHostInfoTable</td>
+                    <td>cpaeHostInfoHostIndex</td>
+                    <td>{cpaeHostInfoEntry}.1</td>
+                </tr>
+                
+                <tr>
+                    <td>cpaeHostInfoTable</td>
+                    <td>cpaeHostBackendState</td>
+                    <td>{cpaeHostInfoEntry}.10</td>
+                </tr>
+                
+                <tr>
+                    <td>cpaeHostInfoTable</td>
+                    <td>cpaeHostSessionId</td>
+                    <td>{cpaeHostInfoEntry}.11</td>
+                </tr>
+                
+                <tr>
+                    <td>cpaeHostInfoTable</td>
+                    <td>cpaeHostInfoMacAddress</td>
+                    <td>{cpaeHostInfoEntry}.2</td>
+                </tr>
+                
+                <tr>
+                    <td>cpaeHostInfoTable</td>
+                    <td>cpaeHostInfoPostureToken</td>
+                    <td>{cpaeHostInfoEntry}.3</td>
+                </tr>
+                
+                <tr>
+                    <td>cpaeHostInfoTable</td>
+                    <td>cpaeHostInfoUserName</td>
+                    <td>{cpaeHostInfoEntry}.4</td>
+                </tr>
+                
+                <tr>
+                    <td>cpaeHostInfoTable</td>
+                    <td>cpaeHostInfoAddrType</td>
+                    <td>{cpaeHostInfoEntry}.5</td>
+                </tr>
+                
+                <tr>
+                    <td>cpaeHostInfoTable</td>
+                    <td>cpaeHostInfoAddr</td>
+                    <td>{cpaeHostInfoEntry}.6</td>
+                </tr>
+                
+                <tr>
+                    <td>cpaeHostInfoTable</td>
+                    <td>cpaeHostPostureTokenStr</td>
+                    <td>{cpaeHostInfoEntry}.7</td>
+                </tr>
+                
+                <tr>
+                    <td>cpaeHostInfoTable</td>
+                    <td>cpaeHostUrlRedirection</td>
+                    <td>{cpaeHostInfoEntry}.8</td>
+                </tr>
+                
+                <tr>
+                    <td>cpaeHostInfoTable</td>
+                    <td>cpaeHostAuthPaeState</td>
+                    <td>{cpaeHostInfoEntry}.9</td>
+                </tr>
+                
+            </table>
+        </details>
+        
+        <details>
+            <summary>cpaeSuppHostInfoTable</summary>
+            <table>
+                <thead>
+                    <tr>
+                        <th>MIB</th>
+                        <th>Object</th>
+                        <th>OID</th>
+                    </tr>
+                </thead>
+                
+                <tr>
+                    <td>cpaeSuppHostInfoTable</td>
+                    <td>cpaeSuppHostInfoSuppIndex</td>
+                    <td>{cpaeSuppHostInfoEntry}.1</td>
+                </tr>
+                
+                <tr>
+                    <td>cpaeSuppHostInfoTable</td>
+                    <td>ccpaeSuppHostAuthMacAddress</td>
+                    <td>{cpaeSuppHostInfoEntry}.2</td>
+                </tr>
+                
+                <tr>
+                    <td>cpaeSuppHostInfoTable</td>
+                    <td>cpaeSuppHostPaeState</td>
+                    <td>{cpaeSuppHostInfoEntry}.3</td>
+                </tr>
+                
+                <tr>
+                    <td>cpaeSuppHostInfoTable</td>
+                    <td>cpaeSuppHostBackendState</td>
+                    <td>{cpaeSuppHostInfoEntry}.4</td>
+                </tr>
+                
+                <tr>
+                    <td>cpaeSuppHostInfoTable</td>
+                    <td>cpaeSuppHostStatus</td>
+                    <td>{cpaeSuppHostInfoEntry}.5</td>
+                </tr>
+                
+            </table>
+        </details>
+        
+        <details>
+            <summary>dot1xPaeSystem</summary>
+            <table>
+                <thead>
+                    <tr>
+                        <th>MIB</th>
+                        <th>Object</th>
+                        <th>OID</th>
+                    </tr>
+                </thead>
+                
+                <tr>
+                    <td>dot1xPaeSystem</td>
+                    <td>dot1xPaeSystemAuthControl</td>
+                    <td>{dot1xPaeSystem}.1.0</td>
+                </tr>
+                
+            </table>
+        </details>
+        
+        <details>
+            <summary>dot1xPaePortTable</summary>
+            <table>
+                <thead>
+                    <tr>
+                        <th>MIB</th>
+                        <th>Object</th>
+                        <th>OID</th>
+                    </tr>
+                </thead>
+                
+                <tr>
+                    <td>dot1xPaePortTable</td>
+                    <td>dot1xPaePortNumber</td>
+                    <td>{dot1xPaePortEntry}.1</td>
+                </tr>
+                
+                <tr>
+                    <td>dot1xPaePortTable</td>
+                    <td>dot1xPaePortProtocolVersion</td>
+                    <td>{dot1xPaePortEntry}.2</td>
+                </tr>
+                
+                <tr>
+                    <td>dot1xPaePortTable</td>
+                    <td>dot1xPaePortCapabilities</td>
+                    <td>{dot1xPaePortEntry}.3:hex</td>
+                </tr>
+                
+                <tr>
+                    <td>dot1xPaePortTable</td>
+                    <td>dot1xPaePortInitialize</td>
+                    <td>{dot1xPaePortEntry}.4</td>
+                </tr>
+                
+                <tr>
+                    <td>dot1xPaePortTable</td>
+                    <td>dot1xPaePortReauthenticate</td>
+                    <td>{dot1xPaePortEntry}.5</td>
+                </tr>
+                
+            </table>
+        </details>
+        
+        <details>
+            <summary>dot1xAuthConfigTable</summary>
+            <table>
+                <thead>
+                    <tr>
+                        <th>MIB</th>
+                        <th>Object</th>
+                        <th>OID</th>
+                    </tr>
+                </thead>
+                
+                <tr>
+                    <td>dot1xAuthConfigTable</td>
+                    <td>dot1xAuthPaeState</td>
+                    <td>{dot1xAuthConfigEntry}.1</td>
+                </tr>
+                
+                <tr>
+                    <td>dot1xAuthConfigTable</td>
+                    <td>dot1xAuthServerTimeout</td>
+                    <td>{dot1xAuthConfigEntry}.10</td>
+                </tr>
+                
+                <tr>
+                    <td>dot1xAuthConfigTable</td>
+                    <td>dot1xAuthMaxReq</td>
+                    <td>{dot1xAuthConfigEntry}.11</td>
+                </tr>
+                
+                <tr>
+                    <td>dot1xAuthConfigTable</td>
+                    <td>dot1xAuthReAuthPeriod</td>
+                    <td>{dot1xAuthConfigEntry}.12</td>
+                </tr>
+                
+                <tr>
+                    <td>dot1xAuthConfigTable</td>
+                    <td>dot1xAuthReAuthEnabled</td>
+                    <td>{dot1xAuthConfigEntry}.13</td>
+                </tr>
+                
+                <tr>
+                    <td>dot1xAuthConfigTable</td>
+                    <td>dot1xAuthKeyTxEnabled</td>
+                    <td>{dot1xAuthConfigEntry}.14</td>
+                </tr>
+                
+                <tr>
+                    <td>dot1xAuthConfigTable</td>
+                    <td>dot1xAuthBackendAuthState</td>
+                    <td>{dot1xAuthConfigEntry}.2</td>
+                </tr>
+                
+                <tr>
+                    <td>dot1xAuthConfigTable</td>
+                    <td>dot1xAuthAdminControlledDirections</td>
+                    <td>{dot1xAuthConfigEntry}.3</td>
+                </tr>
+                
+                <tr>
+                    <td>dot1xAuthConfigTable</td>
+                    <td>dot1xAuthOperControlledDirections</td>
+                    <td>{dot1xAuthConfigEntry}.4</td>
+                </tr>
+                
+                <tr>
+                    <td>dot1xAuthConfigTable</td>
+                    <td>dot1xAuthAuthControlledPortStatus</td>
+                    <td>{dot1xAuthConfigEntry}.5</td>
+                </tr>
+                
+                <tr>
+                    <td>dot1xAuthConfigTable</td>
+                    <td>dot1xAuthAuthControlledPortControl</td>
+                    <td>{dot1xAuthConfigEntry}.6</td>
+                </tr>
+                
+                <tr>
+                    <td>dot1xAuthConfigTable</td>
+                    <td>dot1xAuthQuietPeriod</td>
+                    <td>{dot1xAuthConfigEntry}.7</td>
+                </tr>
+                
+                <tr>
+                    <td>dot1xAuthConfigTable</td>
+                    <td>dot1xAuthTxPeriod</td>
+                    <td>{dot1xAuthConfigEntry}.8</td>
+                </tr>
+                
+                <tr>
+                    <td>dot1xAuthConfigTable</td>
+                    <td>dot1xAuthSuppTimeout</td>
+                    <td>{dot1xAuthConfigEntry}.9</td>
+                </tr>
+                
+            </table>
+        </details>
+        
+    </details>
+    <details>
+        <summary>Package Dependencies</summary>
+        <table>
+            <thead><tr><th>Package</th><th>Version</th></tr></thead>
+            
+            <tr><td>base_collection_package</td><td>>=1.0.0</td></tr>
+            
+        </table>
+    </details>
+    <details>
+        <summary>RDAF Fabric Service Dependencies</summary>
+        <table>
+            <thead>
+                <tr>
+                    <th>Service</th>
+                    <th>Version</th>
+                </tr>
+            </thead>
+            
+            <tr>
+                <td>rda_worker</td>
+                <td>>3.4.0</td>
+            </tr>
+            
+        </table>
+    </details>
+    <details>
+        <summary>Persistent Streams</summary>
+        <table>
+            <thead>
+                <tr>
+                    <th>Stream Name</th>
+                    <th>data</th>
+                </tr>
+            </thead>
+            
+            <tr>
+                <td>data_collection_stream</td>
+                <td>./data/data_collection_stream.csv</td>
+            </tr>
+            
+        </table>
+    </details>
+    <details>
+        <summary>Datasets</summary>
+        <table>
+            <thead>
+                <tr>
+                    <th>Dataset Name</th>
+                    <th>data</th>
+                </tr>
+            </thead>
+            
+            <tr>
+                <td>collection_profile</td>
+                <td>./data/collection_profile.csv</td>
+            </tr>
+            
+        </table>
+    </details>
+    <details>
+        <summary>Pipelines</summary>
+        <table>
+            <thead>
+                <tr>
+                    <th>Pipeline Name</th>
+                    <th>Version</th>
+                    <th>File</th>
+                </tr>
+            </thead>
+            
+            <tr>
+                <td>topo_collection_$PKG_CONTEXT_CUSTOMER_ID</td>
+                <td>2024.2.16.1</td>
+                <td>./artifacts/pipelines/topo_collection.txt</td>
+            </tr>
+            
+            <tr>
+                <td>topo_calculate</td>
+                <td>2024.2.16.1</td>
+                <td>./artifacts/pipelines/topo_calculate.txt</td>
+            </tr>
+            
+        </table>
+    </details>
+</body>
+
+</html>
